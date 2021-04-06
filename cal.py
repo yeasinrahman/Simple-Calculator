@@ -8,7 +8,7 @@ win.geometry('644x1000')
 def click(event):
     global screen
     text=event.widget.cget('text')
-    # print(text)
+  
 
     if text =='=':
         if screen.get().isdigit():
@@ -20,7 +20,7 @@ def click(event):
                 value = eval(screen1.get())
 
             except Exception as e:
-                # print(e)
+                
                 value = "Error" 
 
         
@@ -142,6 +142,6 @@ b.pack(side=LEFT,padx=5,pady=5)
 b.bind('<Button-1>',click)
 
 f.pack()
-# scrollbar.config(command=b.yview)
+
 win['bg']='grey'
 win.mainloop()
